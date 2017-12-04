@@ -114,4 +114,3 @@ public abstract class AbstractEntity implements Serializable {
 
     }
 }
-
