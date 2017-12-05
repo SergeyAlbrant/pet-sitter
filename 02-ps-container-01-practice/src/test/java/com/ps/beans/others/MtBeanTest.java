@@ -17,12 +17,12 @@ public class MtBeanTest {
 
     @Test
     public void testConfig() {
-        //TODO 7. Try to use wildcards as well.
-        ApplicationContext ctx = new ClassPathXmlApplicationContext(
+       /* ApplicationContext ctx = new ClassPathXmlApplicationContext(
                 "classpath:spring/others/factory-config.xml",
                 "classpath:spring/others/collections-config.xml",
                 "classpath:spring/others/custom-editors-config.xml",
-                "classpath:spring/others/multiple-types-config.xml");
+                "classpath:spring/others/multiple-types-config.xml");*/
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:spring/others/*-config.xml");
 
         MultipleTypesBean mtBean = (MultipleTypesBean) ctx.getBean("mtBean");
         assertNotNull(mtBean);
